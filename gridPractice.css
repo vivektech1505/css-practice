@@ -1,0 +1,115 @@
+
+body, html{
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom right, darkgray, darkolivegreen);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 1.5fr 1fr 1fr 0.8fr;
+    grid-template-areas: "header header header header header"
+                        "sidebar main main main main"
+                        "sidebar section1 section2 section3 section4"
+                        "sidebar section5 section5 section5 section5"
+                        "footer footer footer footer footer";
+                        height: 100vh;
+                        gap: 5px;
+                        border-radius: 5px solid black;
+}
+
+.header {
+    background-color: yellowgreen;
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+}
+.sidebar{
+    background-color: red;
+    grid-area: sidebar;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+}
+.main{
+    background-color: aqua;
+    grid-area: main;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder; */
+    display: inline;
+    align-items: center;
+}
+.section1{
+    background-color: blanchedalmond;
+    grid-area: section1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+}
+.section2{
+    background-color: blueviolet;
+    grid-area: section2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+}
+.section3{
+   background-color: beige;
+   grid-area: section3;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-weight: bolder;
+}
+.section4{
+    background-color: brown;
+    grid-area: section4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+}
+.section5 {
+    background-color: aqua;
+    grid-area: section5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+}
+footer{
+    background-color: blueviolet;
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+}
+p{
+    text-align: start;
+    padding-left: 5px;
+}
+
+
+@media only screen and  (max-width:750px) {
+    
+    .container{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "header header header header"
+                             "sidebar sidebar sidebar sidebar"
+                             "main main main main"
+                             "section1 section2 section3 section4"
+                             "section5 section5 section5 section5"
+                             "footer footer footer footer";
+    }
+    
+}

@@ -1,0 +1,42 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px auto 100px;
+    height: 100vh;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+header{
+    background: red;
+    grid-column-start: span 3;
+}
+aside{
+    background: darkgrey;
+    grid-column-start: span 1;
+}
+main{
+    background: blue;
+    grid-column-start: span 2;
+}
+footer {
+    background: rgb(55, 9, 181);
+    grid-column-start: span 3;
+}
+
+@media only screen and (max-width : px) {
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px auto auto 100px;
+    }
+    header,aside,main,footer{
+        grid-column-start: span 1;
+    }
+}
